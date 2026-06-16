@@ -7,7 +7,7 @@ import { clearCartItems } from '../slices/cartSlice';
 import { toast } from 'react-toastify';
 import Loader from '../components/Loader';
 import CheckoutSteps from '../components/CheckoutSteps';
-import { FaIndianRupeeSign } from 'react-icons/fa6';
+import { FaDollarSign} from 'react-icons/fa6';
 import Meta from '../components/Meta';
 import { addCurrency } from '../utils/addCurrency';
 

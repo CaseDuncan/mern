@@ -10,7 +10,7 @@ import {
 } from '../slices/ordersApiSlice';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import { FaIndianRupeeSign } from 'react-icons/fa6';
+import { FaDollarSign} from 'react-icons/fa6';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import ServerError from '../components/ServerError';
