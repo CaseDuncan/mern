@@ -1,34 +1,37 @@
 import mongoose from 'mongoose';
 
-// Define the schema for users
 const userSchema = new mongoose.Schema(
   {
-    // User's name
-    name: {
-      type: String,
-      required: true
-    },
-    // User's email, must be unique
+    name: { type: String },
+
     email: {
       type: String,
       required: true,
       unique: true
     },
-    // User's password
+
     password: {
-      type: String,
-      required: true
+      type: String
     },
-    // Indicates whether the user is an admin or not
+
     isAdmin: {
       type: Boolean,
-      required: true,
       default: false
+    },
+
+    // Clerk-only field
+    clerkUserId: {
+      type: String,
+      unique: true,
+      sparse: true
+    },
+
+    image: {
+      type: String
     }
   },
-  { timestamps: true } // Adds createdAt and updatedAt timestamps
+  { timestamps: true }
 );
-
 // Create the User model
 const User = mongoose.model('User', userSchema);
 
